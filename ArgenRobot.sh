@@ -8,7 +8,8 @@
 TOKEN="" #token del bot
 ID="" #Id del canal
 
-MENSAJE="La temperatura del pi es:  $(/opt/vc/bin/vcgencmd measure_temp)"
+MENSAJE="La temperatura del pi es:  $(/opt/vc/bin/vcgencmd measure_temp) \n 
+$(python CheckUrl.py)"
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
 curl -s -X POST $URL -d chat_id=$ID -d text="$MENSAJE"
