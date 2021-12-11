@@ -33,8 +33,9 @@ def is_page_available(host, path="/"):
 with open('lista_url.csv', 'r') as File:
     reader = csv.reader(File)
     for row in reader:
-        enlinea = is_page_available(row[0])
-        print('este sitio ' + str(row[0]) + ' esta en linea? ----> ' + str(enlinea))
+        onLine = is_page_available(row[0])
+        print('El sitio ' + str(row[0]) + ' está online? ----> ' + str(onLine))
+
 
       
      
