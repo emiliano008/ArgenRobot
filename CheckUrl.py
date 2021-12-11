@@ -34,7 +34,8 @@ with open('lista_url.csv', 'r') as File:
     reader = csv.reader(File)
     for row in reader:
         onLine = is_page_available(row[0])
-        print('El sitio ' + str(row[0]) + ' está online? ----> ' + str(onLine))
+        if not onLine: 
+            print('El sitio ' + str(row[0]) + ' está online? ----> ' + str(onLine))
 
 
       
